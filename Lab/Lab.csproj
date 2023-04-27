@@ -93,6 +93,10 @@
     <Compile Include="Migrations\202304251627553_ChangedTestPatient.designer.cs">
       <DependentUpon>202304251627553_ChangedTestPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202304271739247_it.cs" />
+    <Compile Include="Migrations\202304271739247_it.designer.cs">
+      <DependentUpon>202304271739247_it.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -110,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202304251627553_ChangedTestPatient.resx">
       <DependentUpon>202304251627553_ChangedTestPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202304271739247_it.resx">
+      <DependentUpon>202304271739247_it.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
