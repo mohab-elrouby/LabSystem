@@ -19,7 +19,6 @@ namespace Lab.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TestPatient>().HasKey(i => new { i.PatientId, i.TestId });
             modelBuilder.Entity<TestPatient>().HasRequired(i => i.test).WithMany(i => i.PaitentTests).HasForeignKey(i => i.TestId);
             modelBuilder.Entity<TestPatient>().HasRequired(i => i.Patient).WithMany(i => i.PaitentTests).HasForeignKey(i => i.PatientId);
         }
