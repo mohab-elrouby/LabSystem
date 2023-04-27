@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Lab.Data
 {
-    internal class Adress
+    public class Adress
     {
+        public int Id { get; set; }
+        public string Governorate { get; set; }
+        public string City { get; set; }
     }
 }

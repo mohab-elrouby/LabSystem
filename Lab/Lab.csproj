@@ -68,6 +68,7 @@
     <Compile Include="Custom Controls\CustomTextBox.designer.cs">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\Adress.cs" />
     <Compile Include="Data\LabContext.cs" />
     <Compile Include="Data\Patient.cs" />
     <Compile Include="Data\Test.cs" />
