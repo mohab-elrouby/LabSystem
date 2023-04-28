@@ -175,18 +175,35 @@ namespace LabProject_Task1
                 };
                 context.Patients.Add(newPatient);
                 context.SaveChanges();
+                this.savedStatus.Text = "Patient saved!";
+                this.savedStatus.Visible = true;
             }
             else
             {
                 this.ValidateName(sender, e, this.txtName, this.nameError);
                 this.ValidateAge(sender, e, this.txtAge, ageError);
                 this.ValidatePhone(sender, e, this.txtPhone, this.phoneError);
+                this.savedStatus.Text = "One ore more inputs are not valid";
+                this.savedStatus.Visible = true;
             }
         }
 
         private void testsComboBox_OnSelectedIndexChanged(object sender, EventArgs e)
         {
             this.txtPrice.Texts = context.Tests.Where(t => t.Name == this.testsComboBox.SelectedItem).Select(t => t.Price).FirstOrDefault().ToString();
+            //this.txtPrice.PlaceholderText = context.Tests.Where(t => t.Name == this.testsComboBox.SelectedItem).Select(t => t.Price).FirstOrDefault().ToString();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            foreach(var c in this.Controls)
+            {
+                if (c.GetType() == typeof(CustomTextBox))
+                {
+                    var x = (CustomTextBox)c as CustomTextBox;
+                    x.Texts = "";
+                }
+            }
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
