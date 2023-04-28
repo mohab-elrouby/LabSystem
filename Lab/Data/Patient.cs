@@ -13,6 +13,8 @@ namespace Lab.Data
         public int Age { get; set; }
         public string Job {  get; set; }
         public string Phone { get; set; }
+        public Adress adress { get; set; }
+
 
         public List<TestPatient> PaitentTests { get; set; }
 

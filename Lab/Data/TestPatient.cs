@@ -8,12 +8,14 @@ namespace Lab.Data
 {
     public class TestPatient
     {
+        public int Id { get; set; }
         public int TestId { get;set; }
         public Test test { get;set; }
         public int PatientId { get;set; }
         public Patient Patient { get;set; }
+        public string Doctor { get; set; }
 
-        public float PriceAfterDiscount { get;set; }
+        public float PriceAfterDiscount { get;set;}
 
         public DateTime Date { get; set; }
     }

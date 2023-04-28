@@ -16,10 +16,10 @@ namespace Lab.Data
         public DbSet<Test> Tests { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<TestPatient> TestPatients { get; set; }
+        public DbSet<Adress> Adresses { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TestPatient>().HasKey(i => new { i.PatientId, i.TestId });
             modelBuilder.Entity<TestPatient>().HasRequired(i => i.test).WithMany(i => i.PaitentTests).HasForeignKey(i => i.TestId);
             modelBuilder.Entity<TestPatient>().HasRequired(i => i.Patient).WithMany(i => i.PaitentTests).HasForeignKey(i => i.PatientId);
         }
